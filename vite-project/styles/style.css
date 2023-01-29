@@ -1,0 +1,112 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Press Start 2P", cursive;
+  background-color: var(--red);
+}
+
+:root {
+  --light-blue: #5a78c4;
+  --cyan: #2b78bf;
+  --red: #d21404;
+  --light-yellow: #ffcb05;
+  --dark-yellow: #c7a008;
+}
+
+.header {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+#form {
+  text-align: center;
+  margin: 1.5rem;
+  padding: 1rem;
+  border: solid 0.2rem;
+  border-radius: 1rem;
+  background-color: var(--cyan);
+}
+
+.label {
+  font-size: 2rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  border-radius: 0.8rem;
+  background-color: var(--cyan);
+}
+
+.name-input {
+  font-size: 2rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  border-radius: 0.8rem;
+  background-color: var(--light-yellow);
+}
+
+#submit {
+  font-size: 2rem;
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.4rem 0.2rem;
+  background-color: var(--dark-yellow);
+  transition: all 0.3s;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: var(--light-yellow);
+}
+
+.name {
+  font-size: 2.5rem;
+  background-color: var(--light-blue);
+}
+
+.image {
+  float: left;
+  height: 30%;
+  width: 30%;
+  background-color: var(--light-blue);
+}
+
+.list {
+  font-size: 2.5rem;
+  margin: 1rem;
+  background-color: var(--light-blue);
+}
+
+.abilities {
+  font-size: 2.5rem;
+  background-color: var(--light-blue);
+}
+
+.types {
+  font-size: 2.5rem;
+  background-color: var(--light-blue);
+}
+
+.list-item {
+  background-color: var(--light-blue);
+  margin: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 1rem;
+  background-color: var(--light-blue);
+  width: 50%;
+  margin: auto;
+  border-radius: 1rem;
+  border: solid 0.3rem;
+}
+
+.error {
+  font-size: 2.5rem;
+  text-align: center;
+}
