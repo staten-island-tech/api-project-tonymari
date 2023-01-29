@@ -2,28 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="pikachu.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Creepster&family=DM+Serif+Display&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <title>rick and morty rocks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Information Finder</title>
   </head>
-
-  <body class="warm">
-    <header class="tabs">
-      <button class="home" type="button">Home</button>
-      <button class="male" type="button">Male</button>
-      <button class="female" type="button">Female</button>
+  <body>
+    <header>
+      <h1 class="header">Pokedex</h1>
     </header>
-    <div class="results">
-      <section class="section">
-        <h1>welcome to the world of rick and morty</h1>
-      </section>
-      <div id="cold"></div>
-    </div>
-    <script type="module" src="./js//main.js"></script>
+    <form id="form">
+      <label for="pokemon-name" class="label">Pokedex:</label>
+      <input
+        type="text"
+        class="name-input"
+        name="pokemon-name"
+        id="pokemon-name"
+      />
+      <button type="submit" id="submit">Click Me</button>
+    </form>
+    <main>
+      <div id="app"></div>
+    </main>
+    <script type="module" src="../js/main.js"></script>
   </body>
 </html>

@@ -18,10 +18,13 @@ async function getData(URL) {
       <img src="${data.sprites.front_default}" alt="Front of ${
           data.name
         }" class="image">
+        <h3 class="list">Type</h3>
+        <ul class="types"></ul>
       <h3 class="list">Abilities</h3>
       <ul class="abilities"></ul>
-      <h3 class="list">Type(s)</h3>
-      <ul class="types"></ul>
+
+
+  
     </div>`
       );
       data.abilities.forEach((a) =>
@@ -49,7 +52,7 @@ async function getData(URL) {
     console.log(error);
     DOM.container.insertAdjacentHTML(
       "afterbegin",
-      `<h1 class="error">(._.) ermm what the heck</h1>`
+      `<h1 class="error">Sorry, please try again</h1>`
     );
   }
 }
