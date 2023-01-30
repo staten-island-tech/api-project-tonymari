@@ -1,5 +1,5 @@
 import "/style.css";
-import { DOM } from "../js/DOMSelectors.js";
+import { Dom } from "./dom.js";
 
 async function getData(URL) {
   try {
@@ -9,33 +9,18 @@ async function getData(URL) {
     } else {
       const data = await response.json();
 
-      DOM.container.insertAdjacentHTML(
+      Dom.container.insertAdjacentHTML(
         "afterbegin",
         `  <div class="card">
-      <h2 class="name">${
-        data.name.charAt(0).toUpperCase() + data.name.slice(1)
-      }</h2>
-      <img src="${data.sprites.front_default}" alt="Front of ${
+     <h2 class="name">${
+       data.name.charAt(0).toUpperCase() + data.name.slice(1)
+     }</h2>
+     <img src="${data.sprites.front_default}" alt="Front of ${
           data.name
         }" class="image">
-        <h3 class="list">Type</h3>
-        <ul class="types"></ul>
-      <h3 class="list">Abilities</h3>
-      <ul class="abilities"></ul>
-
-
-  
+       <h3 class="list">Pokemon Type:</h3>
+       <ul class="types"></ul>
     </div>`
-      );
-      data.abilities.forEach((a) =>
-        document
-          .querySelector(".abilities")
-          .insertAdjacentHTML(
-            "afterbegin",
-            `<li class="list-item">${
-              a.ability.name.charAt(0).toUpperCase() + a.ability.name.slice(1)
-            }</li>`
-          )
       );
       data.types.forEach((t) =>
         document
@@ -50,21 +35,19 @@ async function getData(URL) {
     }
   } catch (error) {
     console.log(error);
-    DOM.container.insertAdjacentHTML(
+    Dom.container.insertAdjacentHTML(
       "afterbegin",
       `<h1 class="error">Sorry, please try again</h1>`
     );
   }
 }
-
 function clear() {
-  DOM.name.value = "";
-  DOM.container.innerHTML = "";
+  Dom.name.value = "";
+  Dom.container.innerHTML = "";
 }
-
-DOM.form.addEventListener("submit", function () {
+Dom.form.addEventListener("submit", function () {
   event.preventDefault();
-  let pokemon = DOM.name.value.toLowerCase();
+  let pokemon = Dom.name.value.toLowerCase();
   const URL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
   getData(URL);
   clear();

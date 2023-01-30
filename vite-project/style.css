@@ -5,21 +5,24 @@ body,
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: var(--red);
+  font-family: 'Prompt', sans-serif;
+  background-color: var(--three);
 }
 
 :root {
-  --light-blue: #5a78c4;
-  --cyan: #2b78bf;
-  --red: #d21404;
-  --light-yellow: #ffcb05;
-  --dark-yellow: #c7a008;
+  --one: #d54a36;
+  --two: #1b3649;
+  --three: #ffde78;
+  --four: #ffffff;
 }
 
 .header {
   font-size: 4rem;
   text-align: center;
-  margin: 1.5rem;
+  border-radius: 1rem;
+  background-color: var(--two);
+  color: azure;
+  
 }
 
 #form {
@@ -28,84 +31,88 @@ body,
   padding: 1rem;
   border: solid 0.2rem;
   border-radius: 1rem;
-  background-color: var(--cyan);
+  color: azure;
+  background-color: var(--one);
 }
 
 .label {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
   border-radius: 0.8rem;
-  background-color: var(--cyan);
+  background-color: var(--one);
 }
 
 .name-input {
-  font-size: 2rem;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+  font-size: 3rem;
   border-radius: 0.8rem;
-  background-color: var(--light-yellow);
+  background-color: var(--three);
 }
 
 #submit {
-  font-size: 2rem;
-  border-radius: 0.6rem;
-  padding: 0.3rem 0.4rem 0.2rem;
-  background-color: var(--dark-yellow);
-  transition: all 0.3s;
-}
 
-#submit:hover {
+  display: inline-block;
+  outline: none;
   cursor: pointer;
-  background-color: var(--light-yellow);
-}
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color,border-color,color,box-shadow,filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px 18px;
+  color: rgb(0, 0, 0);
+  background-color: var(--four);
+  height: 48px;
+  }
+
 
 .name {
-  font-size: 2.5rem;
-  background-color: var(--light-blue);
+  font-size: 5rem;
+  background-color: transparent ;
 }
 
 .image {
-  float: left;
   height: 50%;
-  width: 50%;
-  background-color: var(--light-blue);
+  width: 30%;
+  background-color: transparent;
 }
 
 .list {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin: 1rem;
-  background-color: var(--light-blue);
-}
-
-.abilities {
-  font-size: 2.5rem;
-  background-color: var(--light-blue);
+  background-color: transparent;
 }
 
 .types {
-  font-size: 2.5rem;
-  background-color: var(--light-blue);
+  font-size: 3rem;
+  background-color: transparent;
 }
 
 .list-item {
-  background-color: var(--light-blue);
-  margin: 1rem;
+  background-color: transparent;
 }
 
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2.5rem 1rem;
-  background-color: var(--light-blue);
+  padding: 2rem 4rem;
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d83m36e-3b58ca48-fe8a-456e-9ffc-a5a84eca6613.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzJmYjI4MjFhLTE0MDYtNGExZC05YjA0LTY2NjhmMjc4ZTk0NFwvZDgzbTM2ZS0zYjU4Y2E0OC1mZThhLTQ1NmUtOWZmYy1hNWE4NGVjYTY2MTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jOpoPaOypPatcb4k7flznTP9YiwUEX2q2BKoeWUPU74);
   width: 50%;
   margin: auto;
-  border-radius: 1rem;
-  border: solid 0.3rem;
+  border-radius: 500rem;
+  border: solid 1rem;
+  color: azure;
 }
 
 .error {
-  font-size: 2.5rem;
+  font-size: 5rem;
   text-align: center;
 }
