@@ -1,5 +1,5 @@
 import "/style.css";
-import { Dom } from "./dom.js";
+import { Dom } from "./dom";
 
 async function getData(URL) {
   try {
